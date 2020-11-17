@@ -1,0 +1,31 @@
+.services{
+    display: flex;
+    padding: 10em;
+    justify-content: space-around;
+    background-color: #f2f2f2;
+    .services__item{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        p{
+            margin-top: 0.5em;
+            font-size: 3em;
+            font-weight: 1000;
+            transition: all 0.5s;
+            cursor: pointer;
+            &:hover{
+                color: #f20000;
+            }
+        }
+    }
+}
+@media only screen and  (max-width: 768px) {
+    .services{
+        flex-direction: column;
+        padding: 5em;
+        .services__item{
+            margin-top: 5em;
+        }
+    }
+}

@@ -1,0 +1,104 @@
+header{
+    width: 100%;
+    min-height: 100vh;
+    height: 100%;
+    background: url('/img/people-861899_1920.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    z-index: 9999;
+    padding-top: 2em;
+    &::after{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background: linear-gradient(180deg, rgb(0, 0, 0),rgb(255, 255, 255));
+        mix-blend-mode: multiply;
+        z-index: -1;
+    }
+    nav{
+        height: 100px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 10em;
+        .nav__logo{
+            a{
+                position: relative;
+                font-size: 5em;
+                font-family: 'Lobster', cursive;
+                color: #fff;
+                span{
+                    position: absolute;
+                    top:-0.4em;
+                    right: 0;
+                    font-weight: bold;
+                }
+            }
+        }
+        ul{
+            display: flex;
+            align-items: center;
+            li{
+                margin-right: 1rem;
+                text-transform: uppercase;
+                font-size: 1.2em;
+                font-weight: 700;
+                position: relative;
+                a{
+                color: #fff;
+                transition: all 1s;
+                }
+                &::before{
+                    content: '';
+                    position: absolute;
+                    width: 100%;
+                    height: 0.2em;
+                    background-color: #f20000;
+                    left: 0;
+                    bottom: -0.7em;
+                    opacity: 0;
+                    transition: all 0.5s;
+                }
+                &:hover{
+                    &::before{
+                        bottom: 0;
+                        opacity: 1;
+                    }
+                    &>a{
+                        color: #f20000;
+                    }
+                }
+            }
+        }
+    }
+    .header__content{
+        text-transform: uppercase;
+        padding: 80px 100px 0 0 ;
+        padding:  10em;
+        color: #fff;
+        p{
+            font-size: 1.9em;
+        }
+        .content__main{
+            font-size: 11em;
+        }
+    }
+}
+@media only screen and  (max-width: 900px) {
+    header .header__content .content__main {
+        font-size: 5em;
+    }
+    header .header__content {
+        text-align: center;
+    }
+    header nav ul {
+        display:none;
+    }
+    header nav{
+        justify-content: center;
+    }
+}

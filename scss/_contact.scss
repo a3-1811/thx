@@ -1,0 +1,80 @@
+.contact{
+    display: flex;
+    padding: 0 10em;
+    .contact__right{
+        width: 50%;
+         img{
+             width: 100%;
+         }
+    }
+    .contact__left{
+        padding: 5em;
+        width: 50%;
+        .title{
+            font-size: 4.5em;
+            line-height: 1.35;
+            font-weight: 700;
+        }
+        img{
+            padding: 2em 0;
+        }
+        p{
+            font-weight: 600;
+            font-size: 1.4em;
+            line-height: 1.5;
+            span{
+                color: #666666;
+            }
+        }
+        button{
+            margin-top: 2em;
+            &:hover{
+                color: #fff;
+                background: #060606;
+            }
+        }
+    }
+
+}
+
+@media only screen and  (max-width: 768px) {
+    .contact {
+        flex-direction: column;
+    }
+    .contact .contact__left {
+        margin-top: 10em;
+        text-align: center;
+        width: 100%;
+    }
+    .contact .contact__left .title {
+        font-size: 2em;
+    }
+}
+@media only screen and  (max-width: 1025px) {
+    header{
+        min-height: 50vh;
+    }
+    .contact {
+        flex-direction: column;
+    }
+    .container{
+        padding: 0;
+    }
+    .contact .contact__right{
+        display: flex;
+        justify-content: center;
+        height: auto;
+        width: 100%;
+         img{
+            object-fit: cover;
+         }
+    }
+    .contact .contact__left {
+        margin-top: 8em;
+        text-align: center;
+        width: 100%;
+    }
+    .contact .contact__left .title {
+        font-size: 4em;
+    }
+}

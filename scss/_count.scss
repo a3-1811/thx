@@ -1,0 +1,19 @@
+.count{
+    background: #f20000;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10em;
+    color: #fff;
+    .count__item{
+        text-align: center;
+        .numb{
+            font-size: 4.1em;
+            font-weight: 700;
+        }
+        p{
+          font-size: 2em;
+          font-weight: 500;
+        }
+    }
+}
