@@ -16,7 +16,7 @@ header {
   width: 100%;
   min-height: 100vh;
   height: 100%;
-  background: url("/img/people-861899_1920.jpg");
+  background: url("https://thx-html.fruitfulcode.com/wp-content/themes/thx-html/assets/images/people-861899_1920.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
@@ -203,7 +203,7 @@ header {
     .services .services__item {
       margin-top: 5em; } }
 .charity {
-  background: url("/img/run.jpg");
+  background: url("https://thx-html.fruitfulcode.com/wp-content/themes/thx-html/assets/images/run.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   padding: 10em;
