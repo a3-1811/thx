@@ -80,6 +80,7 @@ header{
         padding: 80px 100px 0 0 ;
         padding:  10em;
         color: #fff;
+        animation: animate 3s  forwards;
         p{
             font-size: 1.9em;
         }
@@ -89,8 +90,12 @@ header{
     }
 }
 @media only screen and  (max-width: 900px) {
+    header{
+        background-position: center;
+    }
     header .header__content .content__main {
         font-size: 5em;
+        padding: 0.6em 0;
     }
     header .header__content {
         text-align: center;
@@ -100,5 +105,17 @@ header{
     }
     header nav{
         justify-content: center;
+    }
+}
+// Animation
+@keyframes animate{
+    from{
+        position: absolute;
+        top: 0;
+        opacity: 0;
+    }
+    to{
+        top:50%;
+        opacity: 1;
     }
 }

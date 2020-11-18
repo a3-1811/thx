@@ -26,6 +26,9 @@
         padding: 5em;
         .services__item{
             margin-top: 5em;
+            img{
+                    max-height: 100px;
+            }
         }
     }
 }

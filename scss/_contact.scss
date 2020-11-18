@@ -63,16 +63,16 @@
     .contact .contact__right{
         display: flex;
         justify-content: center;
-        height: auto;
+        height: 200px;
         width: 100%;
          img{
             object-fit: cover;
-         }
+        }
     }
     .contact .contact__left {
-        margin-top: 8em;
         text-align: center;
         width: 100%;
+        margin-top: 5em;
     }
     .contact .contact__left .title {
         font-size: 4em;

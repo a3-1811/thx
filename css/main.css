@@ -79,15 +79,20 @@ header {
     text-transform: uppercase;
     padding: 80px 100px 0 0;
     padding: 10em;
-    color: #fff; }
+    color: #fff;
+    animation: animate 3s  forwards; }
     header .header__content p {
       font-size: 1.9em; }
     header .header__content .content__main {
       font-size: 11em; }
 
 @media only screen and (max-width: 900px) {
+  header {
+    background-position: center; }
+
   header .header__content .content__main {
-    font-size: 5em; }
+    font-size: 5em;
+    padding: 0.6em 0; }
 
   header .header__content {
     text-align: center; }
@@ -97,6 +102,14 @@ header {
 
   header nav {
     justify-content: center; } }
+@keyframes animate {
+  from {
+    position: absolute;
+    top: 0;
+    opacity: 0; }
+  to {
+    top: 50%;
+    opacity: 1; } }
 .btn {
   padding: 1.5em 2.5em;
   margin-top: 0.5em;
@@ -165,15 +178,15 @@ header {
   .contact .contact__right {
     display: flex;
     justify-content: center;
-    height: auto;
+    height: 200px;
     width: 100%; }
     .contact .contact__right img {
       object-fit: cover; }
 
   .contact .contact__left {
-    margin-top: 8em;
     text-align: center;
-    width: 100%; }
+    width: 100%;
+    margin-top: 5em; }
 
   .contact .contact__left .title {
     font-size: 4em; } }
@@ -201,7 +214,9 @@ header {
     flex-direction: column;
     padding: 5em; }
     .services .services__item {
-      margin-top: 5em; } }
+      margin-top: 5em; }
+      .services .services__item img {
+        max-height: 100px; } }
 .charity {
   background: url("/img/run.jpg");
   background-size: cover;
@@ -268,24 +283,208 @@ header {
           font-size: 1.2em; }
 
 @media only screen and (max-width: 768px) {
-  .charity .charity__content {
-    flex-direction: column; }
-    .charity .charity__content .charity__item {
-      width: 100%; } }
+  .charity {
+    padding: 5em; }
+    .charity .charity__content {
+      flex-direction: column; }
+      .charity .charity__content .charity__item {
+        width: 100%; }
+
+  .charity .charity__head p {
+    width: 100%;
+    font-size: 1.5em; } }
 .count {
   background: #f20000;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  padding: 10em;
+  padding: 7em 10em;
   color: #fff; }
   .count .count__item {
-    text-align: center; }
+    text-align: center;
+    transition: all 1s; }
     .count .count__item .numb {
       font-size: 4.1em;
       font-weight: 700; }
     .count .count__item p {
       font-size: 2em;
       font-weight: 500; }
+
+@media only screen and (max-width: 991px) {
+  .count .count__item {
+    padding: 0 2em; }
+
+  .count .count__item p {
+    font-size: 1.7em; } }
+.causes {
+  padding: 7em 10em;
+  color: #000;
+  position: relative; }
+  .causes .causes__head {
+    text-align: center; }
+    .causes .causes__head h2 {
+      font-size: 45px;
+      line-height: 1.35;
+      font-weight: 800; }
+    .causes .causes__head img {
+      margin-top: 2em; }
+    .causes .causes__head p {
+      padding-top: 2em;
+      font-size: 1.8em;
+      width: 60%;
+      margin: 0 auto;
+      letter-spacing: 2px; }
+  .causes .causes__content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap; }
+    .causes .causes__content .causes__item {
+      padding: 0 0.1em;
+      max-width: 330px; }
+      .causes .causes__content .causes__item .imgBox {
+        position: relative;
+        width: 100%;
+        overflow: hidden; }
+        .causes .causes__content .causes__item .imgBox img {
+          object-fit: cover;
+          width: 100%;
+          transition: all 1s; }
+        .causes .causes__content .causes__item .imgBox span {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-size: 2em;
+          color: #fff;
+          background-color: rgba(233, 233, 233, 0.5);
+          opacity: 0;
+          transition: all 1s;
+          cursor: pointer; }
+          .causes .causes__content .causes__item .imgBox span i {
+            background-color: #f20000;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            text-align: center;
+            line-height: 50px; }
+        .causes .causes__content .causes__item .imgBox:hover span {
+          opacity: 1; }
+        .causes .causes__content .causes__item .imgBox:hover img {
+          transform: scale(1.1); }
+      .causes .causes__content .causes__item .causes__content--main h3 {
+        padding: 2em 0.5em 1em 0em;
+        font-size: 2.4em;
+        font-weight: 600; }
+      .causes .causes__content .causes__item .causes__content--main p {
+        font-size: 1.4em;
+        color: #666666;
+        line-height: 1.65; }
+      .causes .causes__content .causes__item .causes__content--main .process .titleBox {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 1em;
+        font-size: 1.4em;
+        color: #060606;
+        font-weight: bold; }
+      .causes .causes__content .causes__item .causes__content--main .process .process_bar {
+        position: relative;
+        margin: 1em 0;
+        height: 7px;
+        width: 100%;
+        background-color: #e4e4e4;
+        z-index: 1; }
+        .causes .causes__content .causes__item .causes__content--main .process .process_bar::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: 35%;
+          background: #ffeb3b;
+          z-index: 10; }
+      .causes .causes__content .causes__item .causes__content--main .process .monnyBox {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 1em;
+        font-size: 1.4em;
+        color: #060606;
+        font-weight: bold; }
+      .causes .causes__content .causes__item .causes__content--main button {
+        padding: 1em 2em; }
+        .causes .causes__content .causes__item .causes__content--main button:hover {
+          background-color: #000;
+          color: white; }
+
+@media only screen and (max-width: 991px) {
+  .causes {
+    padding: 5em; }
+
+  .causes .causes__head {
+    padding: 0; }
+
+  .causes .causes__head p {
+    padding-top: 1em;
+    width: 100%; }
+
+  .causes .causes__content .causes__item {
+    max-width: 100%;
+    padding: 1em; }
+
+  .causes .causes__content .causes__item .causes__content--main button {
+    display: block;
+    margin: 0 auto; } }
+.community {
+  display: flex;
+  min-height: 100vh;
+  height: 100%; }
+  .community .community__left {
+    background-color: #000;
+    max-width: 50%;
+    padding: 10em 0 4em 9em;
+    color: #fff; }
+    .community .community__left h2 {
+      font-size: 45px;
+      line-height: 1.35;
+      font-weight: 800; }
+    .community .community__left img {
+      margin-top: 2em; }
+    .community .community__left p {
+      padding-top: 2em;
+      font-size: 1.4em;
+      max-width: 80%;
+      letter-spacing: 2px; }
+    .community .community__left .btn {
+      margin-top: 2em; }
+  .community .imgBox {
+    max-width: 50%; }
+    .community .imgBox img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%; }
+
+@media only screen and (max-width: 991px) {
+  .community {
+    display: block;
+    background: url(https://thx-html.fruitfulcode.com/wp-content/themes/thx-html/assets/images/homeless_armenian_qristine-wallpaper-1920x1200.jpg);
+    background-position: center;
+    background-size: cover;
+    min-height: 50vh; }
+    .community .community__left {
+      background: rgba(0, 0, 0, 0.5);
+      text-align: center;
+      max-width: 100%;
+      width: 100%;
+      padding: 5em 2em; }
+      .community .community__left p {
+        max-width: 100%; }
+    .community .imgBox {
+      display: none; } }
 
 /*# sourceMappingURL=main.css.map */

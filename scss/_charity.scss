@@ -78,11 +78,16 @@
 }
 @media only screen and  (max-width: 768px) {
     .charity{
+        padding: 5em;
         .charity__content{
             flex-direction: column;
             .charity__item{
                 width: 100%;
             }
         }
+    }
+    .charity .charity__head p {
+        width: 100%;
+        font-size: 1.5em;
     }
 }
